@@ -14,6 +14,25 @@ class ForgotPasswordPage(BasePage):
         self.click_element(FP.EMAIL_INPUT_FIELD)
         self.fill_placeholder(FP.EMAIL_INPUT_FIELD, email)
         
+    @allure.step('Ожидание отображения поля "Новый пароль"')
+    def wait_for_new_password_input(self):
+        self.wait_for_visible_element(FP.NEW_PASSWORD_INPUT_FIELD)
+        
+    @allure.step('Поиск поля ввода "Email" на странице восстановления пароля')
+    def find_email_input_field(self):
+        return self.find_element(FP.EMAIL_INPUT_FIELD)
+    @allure.step('Клик по кнопке "Восстановить пароль"')
+    def click_reset_password_button(self):
+        self.click_element(FP.RESET_PASSWORD_BUTTON)
+
+    @allure.step('Ожидание отображения кнопки "Сохранить пароль"')
+    def wait_for_save_password_button(self):
+        self.wait_for_visible_element(FP.SAVE_PASSWORD_BUTTON)
+
+    @allure.step('Клик по полю ввода "Email" на странице восстановления пароля')
+    def click_email_input_field(self):
+        self.click_element(FP.EMAIL_INPUT_FIELD)
+        
     @allure.step('Заполнение поля "Пароль"')
     def fill_password(self,password):
         self.click_element(FP.NEW_PASSWORD_INPUT_FIELD)
