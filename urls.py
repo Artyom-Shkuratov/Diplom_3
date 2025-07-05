@@ -13,10 +13,11 @@ class Urls:
     ORDERS_HISTORY = MAIN_PAGE + "account/order-history"
     # url раздела "Лента заказов"
     FEED_OF_ORDERS = MAIN_PAGE + "feed"
-
-    # адрес API для регистрации пользователя
-    CREATE_USER = MAIN_PAGE + 'api/auth/register'
-    # адрес API для удаления пользователя
-    DELETE_USER = MAIN_PAGE + 'api/auth/user'
-    # адрес API для авторизация пользователя
-    LOGIN_USER = MAIN_PAGE + 'api/auth/login'
+    
+class ApiUrls:
+    
+    CREATE_USER = Urls.MAIN_PAGE + '/api/auth/register'
+    DELETE_USER = Urls.MAIN_PAGE + '/api/auth/user'
+    LOGIN_USER = Urls.MAIN_PAGE + '/api/auth/login'
+    CREATE_ORDER = Urls.MAIN_PAGE + '/api/orders'
+    

@@ -4,10 +4,10 @@ class ConstructorPageLocators:
     # Локаторы для хедера (верхней навигации)
     # Кнопка "Личный Кабинет" в шапке
     PERSONAL_ACCOUNT_BUTTON = By.XPATH, ".//a[@href='/account' and contains(., 'Личный Кабинет')]"
-    # Кнопка "Лента Заказов" в шапке
-    ORDER_LIST_BUTTON = By.XPATH, ".//a[@href='/feed' and contains(., 'Лента Заказов')]"
     # Кнопка "Конструктор" в шапке
     CONSTRUCTOR_BUTTON = By.XPATH, ".//a[@href='/' and contains(., 'Конструктор')]"
+    # Кнопка "Лента Заказов" в шапке
+    ORDER_LIST_BUTTON = By.XPATH, ".//a[@href='/feed' and contains(., 'Лента Заказов')]"
     # Логотип сайта в шапке, ведущий на главную страницу
     MAIN_LOGO_HEADER = By.XPATH, ".//div[contains(@class, 'AppHeader_header__logo')]//a[@href='/']"
     

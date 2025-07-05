@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 class ProfilePageLocators:
     # Кнопка Профиль 
     PROFILE_BUTTON = (By.XPATH, ".//a[@href='/account/profile' and text()='Профиль']")
+    # Кнопка Личный Кабинет
+    PERSONAL_ACCOUNT_BUTTON = By.XPATH, ".//a[@href='/account' and contains(., 'Личный Кабинет')]"
     # Кнопка История заказов
     ORDER_HISTORY_BUTTON = (By.XPATH, ".//a[@href='/account/order-history' and text()='История заказов']")
     # Кнопка Выход

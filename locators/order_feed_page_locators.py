@@ -5,6 +5,8 @@ class OrderFeedPageLocators:
     ORDER_FEED_TITLE = (By.XPATH, ".//h1[text()='Лента заказов']")
     # Надпись "Выполнено за все время:"
     ORDERS_TOTAL_LABEL = (By.XPATH, ".//p[text()='Выполнено за все время:']")
+    # Кнопка "Лента Заказов" в шапке
+    ORDER_LIST_BUTTON = By.XPATH, ".//a[@href='/feed' and contains(., 'Лента Заказов')]"
     # Значение общего количества выполненных заказов 
     ORDERS_TOTAL_VALUE = (By.CSS_SELECTOR, "p.OrderFeed_number__2MbrQ.text_type_digits-large")
     # Надпись "Выполнено за сегодня:"
