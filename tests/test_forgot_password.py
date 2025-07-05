@@ -18,24 +18,25 @@ class TestForgotPassword:
     @allure.title('Переход на старницу востановления парола после вводы почты')   
     def test_forgot_password_allows_email_input_and_submission(self,driver):
         fp = FP(driver)
+
         fp.open_forgot_password_page()
-        fp.find_element(FPL.EMAIL_INPUT_FIELD)
-        fp.click_element(FPL.EMAIL_INPUT_FIELD)
+        fp.find_email_input_field()
+        fp.click_email_input_field()
         fp.fill_email(GD.generate_email())
-        fp.click_element(FPL.RESET_PASSWORD_BUTTON)
-        fp.wait_for_visible_element(FPL.SAVE_PASSWORD_BUTTON)
-        c_url = fp.get_current_url()
-        assert c_url == Urls.RESET_PASSWORD
-        
+        fp.click_reset_password_button()
+        fp.wait_for_save_password_button()
+
+        assert fp.get_current_url() == Urls.RESET_PASSWORD
+            
     @allure.title('Поле ввода пароля подсвечивается после нажатия на кнопку "Показать/скрыть пароль"')
     def test_password_field_highlights_on_toggle_visibility(self,driver):
         fp = FP(driver)
         fp.open_forgot_password_page()
-        fp.find_element(FPL.EMAIL_INPUT_FIELD)
-        fp.click_element(FPL.EMAIL_INPUT_FIELD)
+        fp.click_email_input_field()
         fp.fill_email(GD.generate_email())
-        fp.click_element(FPL.RESET_PASSWORD_BUTTON)
-        fp.wait_for_element(FPL.NEW_PASSWORD_INPUT_FIELD)
+        fp.click_reset_password_button()
+        fp.wait_for_new_password_input()
         fp.fill_password(GD.generate_password())
         fp.click_show_and_hide_button()
+        
         assert fp.is_new_password_field_highlighted()
