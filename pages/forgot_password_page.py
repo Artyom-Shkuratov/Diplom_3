@@ -1,5 +1,6 @@
 import allure
 from pages.base_page import BasePage
+from data import format_locators
 from urls import Urls
 from locators.forgot_password_page_locators import ForgotPasswordPageLocators as FP
 
@@ -46,6 +47,9 @@ class ForgotPasswordPage(BasePage):
     @allure.step('Проверка, что поле ввода нового пароля подсвечено')
     def is_new_password_field_highlighted(self):
         input_element = self.find_element(FP.NEW_PASSWORD_INPUT_FIELD)
-        parent_div = input_element.find_element("xpath", "./..")
-        return "input_status_active" in parent_div.get_attribute("class")
-    
+        parent_div = input_element.find_element(*format_locators)
+        
+        classes = parent_div.get_attribute("class")
+        print("PARENT DIV CLASSES:", classes)  # DEBUG
+        
+        return "input_status_active" in classes
