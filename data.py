@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 email_domains = [
                 "@yandex.ru",
                 "@gmail.com",
@@ -5,3 +7,5 @@ email_domains = [
                 "@mail.ru"
 ]
 
+
+format_locators = By.XPATH, "./.."
