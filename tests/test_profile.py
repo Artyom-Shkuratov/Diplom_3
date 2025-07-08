@@ -1,7 +1,6 @@
 import allure
 from pages.login_page import LoginPage as LP
 from pages.profile_page import ProfilePage as PP
-from pages.constructor_page import ConstructorPage as CP
 from urls import Urls
 
 

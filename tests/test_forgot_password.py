@@ -1,7 +1,6 @@
 import allure
 from pages.forgot_password_page import ForgotPasswordPage as FP
 from pages.login_page import LoginPage as LP
-from locators.forgot_password_page_locators import ForgotPasswordPageLocators as FPL
 from urls import Urls
 from helpers import GeneratorData as GD
 

@@ -1,8 +1,6 @@
 import allure
 from pages.login_page import LoginPage as LP
 from pages.constructor_page import ConstructorPage as CP
-from locators.order_feed_page_locators import OrderFeedPageLocators as OFPL
-from locators.constructor_page_locators import ConstructorPageLocators as CPL
 from urls import Urls
 
 
